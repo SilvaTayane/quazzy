@@ -1,0 +1,18 @@
+.menu,.new-friends,#add-post{
+    display: none;
+}
+
+#new-post{
+    width: 100%;
+}
+
+.avatar-nav-item{
+    display: block;
+}
+
+.avatar-nav-item img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 4px solid rgb(161, 161, 161);
+}
