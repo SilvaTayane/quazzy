@@ -37,5 +37,20 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: block;
     z-index: 999; /* Para garantir que o footer fique acima de outros elementos */
+}
+
+.foto-perfil-block{
+    display: block;
+}
+
+.foto-perfil{
+    display: none;
+}
+
+.avatar img{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
 }

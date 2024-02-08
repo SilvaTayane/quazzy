@@ -1,6 +1,5 @@
 * {
-    font-family: 'Open Sans', sans-serif;
-    font-size: medium;
+    font-family: 'lato','sans-serif';
 }
 
 .bg-primary-color {
@@ -146,4 +145,19 @@ ul {
 
 footer{
     position: fixed;
+    display: none;
 }
+
+.foto-perfil-block{
+    display: none;
+}
+
+.reaction-button {
+    cursor: pointer;
+    color: rgb(0, 174, 255);
+  }
+  
+  .reaction-button.clicked {
+    color: #ff0000; /* Altere a cor conforme necessário */
+  }
+  
