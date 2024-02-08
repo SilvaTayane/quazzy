@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que o footer fique sempre no rodapé */
+}
+
+.menu,.new-friends{
+    display: none;
+}
+
+#new-post{
+    width: 100%;
+}
+
+.avatar-nav-item{
+    display: block;
+}
+
+.avatar-nav-item img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 4px solid rgb(161, 161, 161);
+}
+
+main {
+    flex: 1; /* Para que o conteúdo principal ocupe o espaço restante */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 999; /* Para garantir que o footer fique acima de outros elementos */
+}
+
+.foto-perfil-block{
+    display: block;
+}
+
+.foto-perfil{
+    display: none;
+}
+
+.avatar img{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
