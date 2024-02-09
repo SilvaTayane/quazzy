@@ -33,4 +33,4 @@
 3. JavaScript: Linguagem de programação utilizada para adicionar interatividade à página.
    
 ## Como Acessar
-Você pode acessar nossa página de rede social <a href="https://fabio-jr-sm.github.io/quazzy/">Clique Aqui</a>
+Você pode acessar nossa página de rede social <a href="[https://fabio-jr-sm.github.io/quazzy/](https://silvatayane.github.io/quazzy/)https://silvatayane.github.io/quazzy/">Clique Aqui</a>
