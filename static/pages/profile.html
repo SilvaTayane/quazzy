@@ -63,19 +63,18 @@
     </nav>
 
 
-    <div class="container"  id="main">
+    <div class="container p-3" id="main">
 
         <nav class="col">
             <header class="avatar d-flex">
-                <img src="/static/imagens/MichaelScott.png"/>
+                <img src="/static/imagens/MichaelScott.png" />
                 <div class="cotainer">
                     <h2>Michael Scott</h2>
                     <ul class="d-flex">
-                        <li class="icon-dashboard"><span><a class="text-info" href="#">5 Publicações</a></span></li>
-                        <li class="icon-users"><span><a class="text-info" href="#">12 seguidores</a></span>
-                        </li>
-                        <li class="icon-settings"><span><a class="text-info" href="#">12 seguindo</a></span>
-                        </li>
+                        <span><a class="text-info p-2 link-underline-dark" href="#">5 Publicações</a></span>
+                        <span><a class="text-info p-2 link-underline-dark" href="#">12 seguidores</a></span>
+                        <span><a class="text-info p-2 link-underline-dark" href="#">12 seguindo</a></span>
+
                     </ul>
                     <p class="m-4">Michael Scott</p>
                     <p class="m-4">Bem Vindo a minha pagina seu noiado</p>
@@ -87,12 +86,13 @@
 
 
         <!--Conteudo dos posts-->
-        <div class="row d-flex justify-content-center" id="new-post">
+        <div class="row p-3 d-flex justify-content-center" id="new-post">
             <div class="container" id="add-post">
                 <div class="col">
                     <form action="">
                         <div class="row">
-                            <textarea rows="4" cols="50" placeholder="What's happening?"></textarea>
+                            <textarea style="resize: none;" rows="4" cols="50"
+                                placeholder="What's happening?"></textarea>
                         </div>
 
                         <div class="row col-8 mt-3 mb-4">
@@ -135,7 +135,7 @@
                     <div class="col">
                         <div class="reaction-button" id="reactionButton">
                             <i class="bi bi-heart"></i>
-                          </div>
+                        </div>
                     </div>
                     <div class="col">
                         <a href="#"><i class="bi bi-chat-left"></i></a>
@@ -146,7 +146,8 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
     </div>
 
     <footer>
@@ -172,7 +173,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-        <script src="/static/script/script.js"></script>
+    <script src="/static/script/script.js"></script>
 </body>
 
 </html>

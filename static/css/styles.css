@@ -161,3 +161,14 @@ footer{
     color: #ff0000; /* Altere a cor conforme necessário */
   }
   
+  textarea {
+    border: none; /* Adicione sua estilização de borda padrão aqui */
+    padding: 5px;
+    outline: none; /* Remove a borda de foco ao clicar no textarea */
+}
+
+/* Estilo para textarea quando em foco */
+textarea:focus {
+    /* Adicione estilização personalizada ou defina a borda como 'none' para remover completamente */
+    border-color: #ccc; /* Altere para a cor desejada ou 'transparent' para remover completamente */
+}
