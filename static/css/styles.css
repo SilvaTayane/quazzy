@@ -172,3 +172,7 @@ textarea:focus {
     /* Adicione estilização personalizada ou defina a borda como 'none' para remover completamente */
     border-color: #ccc; /* Altere para a cor desejada ou 'transparent' para remover completamente */
 }
+
+#trending{
+    margin-top: 10em;
+}
