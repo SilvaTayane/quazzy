@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="pt-br" data-bs-theme="dark">
 
@@ -49,13 +50,13 @@
             </header>
           </li>
           <li class="nav-item">
-            <a href="/index.html" class="nav-link " aria-current="page">Home</a>
+            <a href="{% url 'home' %}" class="nav-link " aria-current="page">Home</a>
           </li>
           <li class="nav-item">
-            <a href="/static/pages/profile.html" class="nav-link">Profile</a>
+            <a href="{% url 'profile' %}" class="nav-link">Profile</a>
           </li>
           <li class="nav-item primary-color">
-            <a href="#" class="nav-link active primary-color">Trending</a>
+            <a href="{% url 'trending' %}" class="nav-link active primary-color">Trending</a>
           </li>
         </ul>
       </div>
@@ -116,16 +117,16 @@
     <div class="cotainer">
       <div class="row">
         <div class="col">
-          <a href="/index.html"><i class="bi bi-house"></i></a>
+          <a href="{% url 'home' %}"><i class="bi bi-house"></i></a>
         </div>
         <div class="col">
           <a href="#"><i class="bi bi-search"></i></a>
         </div>
         <div class="col">
-          <a href="#"><i class="bi bi-plus-circle-fill"></i></a>
+          <a href="{% url 'profile' %}"><i class="bi bi-plus-circle-fill"></i></a>
         </div>
         <div class="col">
-          <a href="/static/pages/profile.html"><i class="bi bi-person-circle"></i></a>
+          <a href="{% url 'profile' %}"><i class="bi bi-person-circle"></i></a>
         </div>
       </div>
     </div>
