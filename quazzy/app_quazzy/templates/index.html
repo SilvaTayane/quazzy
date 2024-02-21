@@ -1,4 +1,4 @@
-{% load static %}
+{% load 'static' %}
 <!doctype html>
 <html lang="pt-br" data-bs-theme="dark">
 
@@ -94,16 +94,29 @@
             <div class="col-6" id="new-post">
                 <div class="container" id="add-post">
                     <div class="col">
-                        <form action="">
+
+                        
+
+                        <!--FORMULARIO DESGRAMADO DA PESTE-->
+
+
+
+                        <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                            <div class="row">
+                                <label>
+                                    Nome
+                                    <input type="text" name="nome">    
+                                </label>
+                            </div>
                             <div class="row">
                                 <textarea style="resize: none;" rows="4" cols="50"
-                                    placeholder="What's happening?"></textarea>
+                                    placeholder="What's happening?" name="" ></textarea>
                             </div>
 
                             <div class="row col-8 mt-3 mb-4">
                                 <div class="col">
-                                    <button type="button" class="btn btn-secondary"><i
-                                            class="bi bi-card-image"></i>Image</button>
+                                    <input value="Image" type="file" class="btn btn-secondary" name="my_file"><i class="bi bi-card-image"></i>
+
                                 </div>
                                 <div class="col">
                                     <button type="button" class="btn btn-secondary"><i
@@ -115,9 +128,14 @@
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <button type="button" class="btn btn-secondary"><i class="bi bi-send"></i>send</button>
+                                <input value="send" type="submit" class="btn btn-secondary"><i class="bi bi-send"></i>
                             </div>
                         </form>
+
+
+
+
+
                     </div>
 
                 </div>
