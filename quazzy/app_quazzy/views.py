@@ -6,21 +6,48 @@ from PIL import Image
 
 def home(request):
     if request.method =="POST":
-        file = request.FILES.get("my_file")
+        publi = Publication()
+        publi.nome = request.POST.get("nome") 
+        publi.text = request.POST.get("text")
+        publi.arq = request.FILES.get("my_file")
         
-        img = Image.open(file)  
-        path = os.path.join(settings.BASE_DIR,f'a.png')      
+        publi.save()
         
-        img = img.save(path)
-        
-        return render(request,'index.html')
+        conteudo = {
+            'conteudo':Publication.objects.all()[::-1]
+        }
+
+        return render(request,'index.html',conteudo)
 
     else:
-        return render(request, 'index.html')
+        conteudo = {
+            'conteudo':Publication.objects.all()[::-1]
+        }
+
+        return render(request,'index.html',conteudo)
         
 
 def profile(request):
-    return render(request, 'profile.html')
+    if request.method =="POST":
+        publi = Publication()
+        publi.nome = request.POST.get("nome") 
+        publi.text = request.POST.get("text")
+        publi.arq = request.FILES.get("my_file")
+        
+        publi.save()
+        
+        conteudo = {
+            'conteudo':Publication.objects.all()[::-1]
+        }
+
+        return render(request,'profile.html',conteudo)
+
+    else:
+        conteudo = {
+            'conteudo':Publication.objects.all()[::-1]
+        }
+
+        return render(request,'profile.html',conteudo)
 
 def trending(request):
     return render(request, 'trending.html')
