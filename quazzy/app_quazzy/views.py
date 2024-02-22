@@ -2,12 +2,10 @@ import os
 from django.shortcuts import render
 from django.conf import settings
 from .models import Publication
-from PIL import Image
 
 def home(request):
     if request.method =="POST":
         publi = Publication()
-        publi.nome = request.POST.get("nome") 
         publi.text = request.POST.get("text")
         publi.arq = request.FILES.get("my_file")
         
@@ -30,7 +28,6 @@ def home(request):
 def profile(request):
     if request.method =="POST":
         publi = Publication()
-        publi.nome = request.POST.get("nome") 
         publi.text = request.POST.get("text")
         publi.arq = request.FILES.get("my_file")
         
