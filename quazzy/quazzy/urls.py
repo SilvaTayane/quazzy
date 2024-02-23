@@ -8,7 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name = 'home' ),
     path('profile/', views.profile, name = 'profile' ),
-    path('trending/', views.trending, name = 'trending' )
+    path('trending/', views.trending, name = 'trending' ),
+    path('new_friend/', views.new_friend, name = 'new-friend' ),
 ]
 
 if settings.DEBUG:

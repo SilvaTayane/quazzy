@@ -3,101 +3,120 @@
 {% load static %}
 
 {% block head %}
-  <link rel="stylesheet" type="text/css" src="{% static 'css/response-profile.css' %}">
+<link rel="stylesheet" type="text/css" media="(max-width: 994px)" src="{% static 'css/response-profile.css' %}">
 {% endblock %}
 
 {% block content %}
 
+<div class="container p-3" id="main">
+
+    <nav class="col">
+        <header class="avatar d-flex">
+            <img src="{% static 'imagens/MichaelScott.png' %}" />
+            <div class="cotainer">
+                <h2>Michael Scott</h2>
+                <ul class="d-flex">
+                    <span><a class="text-info p-2 link-underline-dark" href="#">5 Publicações</a></span>
+                    <span><a class="text-info p-2 link-underline-dark" href="#">12 seguidores</a></span>
+                    <span><a class="text-info p-2 link-underline-dark" href="#">12 seguindo</a></span>
+
+                </ul>
+                <p class="m-4">Michael Scott</p>
+                <p class="m-4">Bem Vindo a minha pagina </p>
+            </div>
+        </header>
+
+    </nav>
+
+        <!--Conteudo dos posts-->
+        <div class="row p-3 d-flex justify-content-center mt-5" id="new-post">
+            <!--Conteudo dos posts-->
+            <div class="col-6" id="new-post">
+                <div class="container" id="add-post">
+                    <div class="col">
 
 
-<!--Conteudo dos posts-->
-<div class="row p-3 d-flex justify-content-center mt-5"  id="new-post">
-    <!--Conteudo dos posts-->
-    <div class="col-6" id="new-post">
-        <div class="container" id="add-post">
-            <div class="col">
+
+                        <!--FORMULARIO ABENCOADO-->
+
+
+                        <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                            <div class="row">
+                                <textarea style="resize: none;" rows="4" cols="50" placeholder="What's happening?"
+                                    name="text" class="form-control"></textarea>
+                            </div>
+
+                            <div class="row col-8 mt-3 mb-4">
+                                <div class="row" style="width: 700px;">
+                                    <input value="Image" type="file" class="form-control" name="my_file">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"><i
+                                            class="bi bi-filetype-gif"></i>Gif</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"><i
+                                            class="bi bi-emoji-smile-fill"></i></button>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <input value="send" type="submit" class="btn btn-secondary">
+                            </div>
+                        </form>
 
 
 
-                <!--FORMULARIO ABENCOADO-->
 
 
-                <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+                    </div>
+
+                </div>
+
+
+
+
+                {% for det in conteudo %}
+                <div class="container" id="user-post">
                     <div class="row">
-                        <textarea style="resize: none;" rows="4" cols="50" placeholder="What's happening?" name="text"
-                            class="form-control"></textarea>
-                    </div>
+                        <div class="col-2">
+                            <img src="{% static 'imagens/MichaelScott.png' %}" alt="very" class="img-very"
+                                id="img-post-user">
+                        </div>
 
-                    <div class="row col-8 mt-3 mb-4">
-                        <div class="row" style="width: 700px;">
-                            <input value="Image" type="file" class="form-control" name="my_file">
+                        <div class="col" id="post-recent">
+                            <p>Fabio<span> 22h</span></p>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <div class="post_foto mt-3">
+                        <p>Via <span>@Fabio</span></p>
+                        <img src="{% static det.arq %}" alt="">
+                        <h6>{{ det.text }}</h3>
+                    </div>
+                    <div class="row col-11 reations">
                         <div class="col">
-                            <button type="button" class="btn btn-secondary"><i
-                                    class="bi bi-filetype-gif"></i>Gif</button>
+                            <div class="reaction-button">
+                                <i class="bi bi-heart"></i>
+                            </div>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-secondary"><i
-                                    class="bi bi-emoji-smile-fill"></i></button>
+                            <a href="#"><i class="bi bi-chat-left"></i></a>
+                        </div>
+                        <div class="col">
+                            <a href="#"><i class="bi bi-send-fill"></i></a>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <input value="send" type="submit" class="btn btn-secondary">
-                    </div>
-                </form>
-
-
-
-
-
-
-            </div>
-
-        </div>
-
-
-
-
-        {% for det in conteudo %}
-        <div class="container" id="user-post">
-            <div class="row">
-                <div class="col-2">
-                    <img src="{% static 'imagens/MichaelScott.png' %}" alt="very" class="img-very" id="img-post-user">
                 </div>
 
-                <div class="col" id="post-recent">
-                    <p>Fabio<span> 22h</span></p>
-                </div>
-            </div>
-            <div class="post_foto mt-3">
-                <p>Via <span>@Fabio</span></p>
-                <img src="{% static det.arq %}" alt="">
-                <h6>{{ det.text }}</h3>
-            </div>
-            <div class="row col-11 reations">
-                <div class="col">
-                    <div class="reaction-button">
-                        <i class="bi bi-heart"></i>
-                    </div>
-                </div>
-                <div class="col">
-                    <a href="#"><i class="bi bi-chat-left"></i></a>
-                </div>
-                <div class="col">
-                    <a href="#"><i class="bi bi-send-fill"></i></a>
-                </div>
+                {% endfor %}
+
+
             </div>
         </div>
-
-        {% endfor %}
 
 
     </div>
-</div>
 
-
-</div>
-
-{% endblock %}
+    {% endblock %}

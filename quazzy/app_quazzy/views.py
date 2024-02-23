@@ -48,3 +48,7 @@ def profile(request):
 
 def trending(request):
     return render(request, 'trending.html')
+
+
+def new_friend(request):
+    return render(request, 'friend.html')

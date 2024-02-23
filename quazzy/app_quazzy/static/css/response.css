@@ -6,7 +6,7 @@ body {
     min-height: 100vh; /* Para que o footer fique sempre no rodapé */
 }
 
-.menu,.new-friends,#add-post{
+.menu,.new-friends{
     display: none;
 }
 
